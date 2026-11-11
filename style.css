@@ -1,0 +1,48 @@
+:root {
+  --paper: #f6f8f5;
+  --ink: #1d2a23;
+  --muted: #5b6b62;
+  --court: #2f6b4f;
+  --line: #d5ddd7;
+  --ball: #c8d64a;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141a17;
+    --ink: #e4ebe6;
+    --muted: #9db0a5;
+    --court: #7fc3a0;
+    --line: #2c3832;
+    --ball: #c8d64a;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.page { max-width: 40rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+header { border-bottom: 2px solid var(--court); padding-bottom: 1.25rem; margin-bottom: 2.25rem; }
+.app { display: flex; align-items: center; gap: .6rem; font-weight: 700; color: var(--court); text-decoration: none; }
+.app::before {
+  content: ""; width: .8rem; height: .8rem; border-radius: 50%;
+  background: var(--ball); box-shadow: inset -2px -2px 0 rgba(0,0,0,.12);
+}
+h1 { font-size: 1.75rem; line-height: 1.4; margin: 1rem 0 0; letter-spacing: .02em; }
+h2 { font-size: 1.1rem; margin: 2.25rem 0 .5rem; color: var(--court); }
+p, li { color: var(--ink); }
+ul { padding-left: 1.25rem; }
+li + li { margin-top: .35rem; }
+.lead { font-size: 1.05rem; }
+.note { color: var(--muted); font-size: .92rem; }
+a { color: var(--court); text-underline-offset: .2em; }
+a:focus-visible { outline: 2px solid var(--court); outline-offset: 3px; border-radius: 2px; }
+nav { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 1.5rem; }
+footer { margin-top: 1.5rem; color: var(--muted); font-size: .85rem; }
